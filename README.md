@@ -59,15 +59,29 @@ RetailPulse addresses these challenges by providing an intelligent analytics pla
 
 **Source:** UCI Machine Learning Repository
 
+The project uses the Online Retail II transactional dataset containing online retail sales data from a UK-based retailer. The dataset is used for customer analytics, segmentation, demand forecasting, inventory optimization, and business intelligence.
+
 ### Dataset Statistics
 
 | Metric | Value |
 |---------|------:|
-| Time Period | Dec 2009 – Dec 2011 |
-| Transactions | 779,425+ |
-| Customers | 5,878 |
-| Products | 4,631 |
-| Countries | 41 |
+| Records | **1,066,371** |
+| Features | **8** |
+| Customers | **5,942** |
+| Products (Stock Codes) | **5,305** |
+| Product Descriptions | **5,698** |
+| Countries | **43** |
+
+### Dataset Features
+
+- Invoice
+- StockCode
+- Description
+- Quantity
+- InvoiceDate
+- Price
+- Customer ID
+- Country
 
 ---
 
