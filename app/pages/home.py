@@ -74,6 +74,56 @@ def _load_project_kpis() -> dict:
     return defaults
 
 
+def _render_about_project() -> None:
+    """Render the Home-only project overview section."""
+    st.markdown("### 📋 About This Project")
+    st.info(
+        "**RetailPulse** is a comprehensive, AI-powered retail analytics platform "
+        "built on **779,425+ transactions** across **41 countries**. It combines "
+        "advanced customer segmentation (RFM), churn prediction, demand forecasting, "
+        "and inventory optimization into a single interactive dashboard.\n\n"
+        "Navigate to any section using the sidebar to explore deep insights."
+    )
+
+
+def _render_quick_navigation() -> None:
+    """Render the Home-only dashboard navigation cards."""
+    st.markdown("### 🚀 Quick Navigation")
+    nav_cards = [
+        ("📊", "Executive Dashboard", "High-level overview of revenue, orders, and customer segments."),
+        ("📈", "Sales Analytics", "Daily & monthly revenue trends, growth analysis, and top sales days."),
+        ("👥", "Customer Analytics", "Customer behaviour, purchase patterns, and engagement metrics."),
+        ("🎯", "Customer Segmentation", "RFM-based customer segmentation and cluster analysis."),
+        ("⚠", "Customer Churn", "Predict churn risk, identify at-risk customers, and retention priorities."),
+        ("📦", "Inventory", "Monitor stock levels, ABC classification, and product movement."),
+        ("🌍", "Country Analysis", "Country-wise revenue, orders, and customer distribution."),
+        ("🛍", "Product Analytics", "Product performance, pricing analysis, and top sellers."),
+        ("📅", "Demand Forecast", "AI-powered demand forecasting with confidence intervals."),
+        ("💡", "Business Insights", "Key business metrics and project summary."),
+    ]
+
+    for row_start in range(0, len(nav_cards), 4):
+        row_items = nav_cards[row_start : row_start + 4]
+        cols = st.columns(len(row_items), gap="medium")
+        for col, (icon, title, desc) in zip(cols, row_items):
+            with col:
+                st.button(
+                    f"Open {title}",
+                    key=f"quick-nav-{title.lower().replace(' ', '-')}",
+                    on_click=helpers.navigate_to_page,
+                    args=(f"{icon} {title}",),
+                    use_container_width=True,
+                )
+                st.markdown(
+                    f'<div class="home-nav-card">'
+                    f'<div class="home-nav-card-icon">{icon}</div>'
+                    f'<div class="home-nav-card-title">{title}</div>'
+                    f'<div class="home-nav-card-desc">{desc}</div>'
+                    f"</div>",
+                    unsafe_allow_html=True,
+                )
+
+
 def show() -> None:
     """Render the Home landing page with project overview and quick navigation."""
 
@@ -110,48 +160,13 @@ def show() -> None:
 
     st.divider()
 
-    # ── Project Description ──
-    st.markdown("### 📋 About This Project")
-    st.info(
-        "**RetailPulse** is a comprehensive, AI-powered retail analytics platform "
-        "built on **779,425+ transactions** across **41 countries**. It combines "
-        "advanced customer segmentation (RFM), churn prediction, demand forecasting, "
-        "and inventory optimization into a single interactive dashboard.\n\n"
-        "Navigate to any section using the sidebar to explore deep insights."
-    )
+    # ── Quick Navigation Cards ──
+    _render_quick_navigation()
 
     st.divider()
 
-    # ── Quick Navigation Cards ──
-    st.markdown("### 🚀 Quick Navigation")
-
-    NAV_CARDS = [
-        ("📊", "Executive Dashboard", "High-level overview of revenue, orders, and customer segments."),
-        ("📈", "Sales Analytics", "Daily & monthly revenue trends, growth analysis, and top sales days."),
-        ("👥", "Customer Analytics", "Customer behaviour, purchase patterns, and engagement metrics."),
-        ("🎯", "Customer Segmentation", "RFM-based customer segmentation and cluster analysis."),
-        ("⚠", "Customer Churn", "Predict churn risk, identify at-risk customers, and retention priorities."),
-        ("📦", "Inventory", "Monitor stock levels, ABC classification, and product movement."),
-        ("🌍", "Country Analysis", "Country-wise revenue, orders, and customer distribution."),
-        ("🛍", "Product Analytics", "Product performance, pricing analysis, and top sellers."),
-        ("📅", "Demand Forecast", "AI-powered demand forecasting with confidence intervals."),
-        ("💡", "Business Insights", "Key business metrics and project summary."),
-    ]
-
-    # Render in rows of 4
-    for row_start in range(0, len(NAV_CARDS), 4):
-        row_items = NAV_CARDS[row_start : row_start + 4]
-        cols = st.columns(len(row_items), gap="medium")
-        for col, (icon, title, desc) in zip(cols, row_items):
-            with col:
-                st.markdown(
-                    f'<div class="home-nav-card">'
-                    f'<div class="home-nav-card-icon">{icon}</div>'
-                    f'<div class="home-nav-card-title">{title}</div>'
-                    f'<div class="home-nav-card-desc">{desc}</div>'
-                    f"</div>",
-                    unsafe_allow_html=True,
-                )
+    # ── Project Description ──
+    _render_about_project()
 
     st.divider()
 

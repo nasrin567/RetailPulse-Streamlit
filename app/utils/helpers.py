@@ -5,6 +5,15 @@ from __future__ import annotations
 from pathlib import Path
 
 import streamlit as st
+import streamlit.components.v1 as components
+
+
+NAVIGATION_STATE_KEY = "navigation"
+
+
+def navigate_to_page(page: str) -> None:
+    """Select a page through the sidebar navigation widget's state."""
+    st.session_state[NAVIGATION_STATE_KEY] = page
 
 
 def load_css() -> None:
@@ -22,6 +31,26 @@ def load_css() -> None:
         )
 
 
+def reset_scroll_position() -> None:
+    """Return Streamlit's main scroll container to the top after a page render."""
+    components.html(
+        """
+        <script>
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+            const app = window.parent;
+            [
+                app.document.querySelector("section.main"),
+                app.document.querySelector('[data-testid="stAppViewContainer"]'),
+                app.document.scrollingElement,
+            ].forEach((container) => container?.scrollTo({ top: 0, left: 0 }));
+        }));
+        </script>
+        """,
+        height=0,
+        width=0,
+    )
+
+
 def render_page_template(title: str, subtitle: str, page_name: str, render_body) -> None:
     """Render the common RetailPulse shell around a dashboard body."""
     render_page_header(title, subtitle)
@@ -31,6 +60,7 @@ def render_page_template(title: str, subtitle: str, page_name: str, render_body)
     finally:
         st.session_state["_shared_page_template_active"] = False
     render_footer(page_name)
+    reset_scroll_position()
 
 
 def render_page_header(title: str, subtitle: str) -> None:

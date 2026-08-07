@@ -374,10 +374,21 @@ div[data-testid="stAlert"] {
 }
 
 /* ─── Sidebar Width (fixed) ──────────────────────────────── */
-[data-testid="stSidebar"] {
+[data-testid="stSidebar"][aria-expanded="true"] {
     width: 280px !important;
     min-width: 280px !important;
     max-width: 280px !important;
+}
+
+/* Keep Streamlit's native sidebar controls accessible above the sidebar edge. */
+[data-testid="stSidebarCollapseButton"],
+[data-testid="stExpandSidebarButton"] {
+    z-index: 1000 !important;
+    overflow: visible !important;
+}
+[data-testid="stExpandSidebarButton"] {
+    visibility: visible !important;
+    pointer-events: auto !important;
 }
 
 /* ─── Section Headers — normalize h2 & h3 ────────────────── */
@@ -472,3 +483,24 @@ div[data-testid="stAlert"] {
     line-height: 1.45;
 }
 
+/* The button overlays each card, preserving its existing visual design. */
+[data-testid="stVerticalBlock"]:has([class*="st-key-quick-nav-"]) {
+    position: relative;
+}
+[class*="st-key-quick-nav-"] {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+[class*="st-key-quick-nav-"] button {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+[data-testid="stVerticalBlock"]:has([class*="st-key-quick-nav-"]):hover .home-nav-card,
+[data-testid="stVerticalBlock"]:has([class*="st-key-quick-nav-"] button:focus-visible) .home-nav-card {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary);
+}

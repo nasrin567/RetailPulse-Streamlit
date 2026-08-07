@@ -107,6 +107,7 @@ with st.sidebar:
         "Navigation",
         list(PAGES.keys()),
         label_visibility="collapsed",
+        key=helpers.NAVIGATION_STATE_KEY,
     )
 
     # ── Dynamic Filters ──
