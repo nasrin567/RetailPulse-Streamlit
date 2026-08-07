@@ -221,9 +221,6 @@ High-level business performance overview including revenue, orders, customers, a
 # 📁 Project Structure
 
 ```text
-# 📁 Project Structure
-
-```text
 RetailPulse/
 │
 ├── 📂 app/
@@ -292,32 +289,43 @@ RetailPulse/
 ├── LICENSE                          # MIT License
 └── .gitignore
 ```
-```
 
 ---
 
 # 📈 Project Workflow
 
 ```text
-Online Retail II Dataset
+01_Data_Understanding
             │
             ▼
-Data Cleaning & Preprocessing
+02_Data_Cleaning
             │
             ▼
-Feature Engineering
+03_Exploratory_Data_Analysis
             │
             ▼
-Exploratory Data Analysis
+04_Feature_Engineering
             │
             ▼
-Machine Learning Models
+05_Customer_Segmentation
+            │
+            ▼
+06_Demand_Forecasting
+            │
+            ▼
+07_Customer_Feature_Engineering
+            │
+            ▼
+08_Customer_Churn_Prediction
+            │
+            ▼
+09_Inventory_Optimization
+            │
+            ▼
+10_Dashboard_Dataset_Preparation
             │
             ▼
 Interactive Streamlit Dashboard
-            │
-            ▼
-Business Insights & Decision Support
 ```
 
 ---
