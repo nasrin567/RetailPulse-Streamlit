@@ -221,29 +221,77 @@ High-level business performance overview including revenue, orders, customers, a
 # 📁 Project Structure
 
 ```text
+# 📁 Project Structure
+
+```text
 RetailPulse/
 │
-├── app/
-│   ├── assets/
-│   ├── pages/
-│   ├── utils/
-│   ├── .streamlit/
-│   └── app.py
+├── 📂 app/
+│   ├── 📂 .streamlit/
+│   │   └── config.toml              # Streamlit configuration
+│   │
+│   ├── 📂 assets/
+│   │   └── style.css                # Custom dashboard styling
+│   │
+│   ├── 📂 pages/                    # Dashboard pages
+│   │
+│   ├── 📂 utils/                    # Utility functions
+│   │
+│   └── app.py                       # Main Streamlit application
 │
-├── data/
+├── 📂 data/
+│   ├── 📂 raw/                      # Original Online Retail II dataset
+│   │   └── online_retail_II.xlsx
+│   │
+│   ├── 📂 processed/                # Processed datasets
+│   │   ├── customer_churn_predictions.csv
+│   │   ├── customer_features.csv
+│   │   ├── customer_rfm.csv
+│   │   ├── customer_segments.csv
+│   │   ├── daily_sales.csv
+│   │   ├── feature_importance.csv
+│   │   ├── forecast.csv
+│   │   ├── inventory_analysis.csv
+│   │   ├── online_retail_II_cleaned.csv
+│   │   └── online_retail_II_merged.csv
+│   │
+│   └── 📂 dashboard/                # Dashboard-ready datasets
+│       ├── executive_overview.csv
+│       ├── sales_analytics.csv
+│       ├── customer_analytics.csv
+│       ├── customer_segmentation.csv
+│       ├── customer_churn.csv
+│       ├── inventory_dashboard.csv
+│       ├── country_analytics.csv
+│       ├── product_analytics.csv
+│       ├── demand_forecasting.csv
+│       ├── business_insights.csv
+│       └── project_summary.csv
 │
-├── models/
-│   ├── churn_model.pkl
-│   └── prophet_model.pkl
+├── 📂 models/
+│   ├── churn_model.pkl              # Customer Churn Prediction Model
+│   └── prophet_model.pkl            # Demand Forecasting Model
 │
-├── notebooks/
+├── 📂 notebooks/
+│   ├── 01_Data_Understanding.ipynb
+│   ├── 02_Data_Cleaning.ipynb
+│   ├── 03_Exploratory_Data_Analysis.ipynb
+│   ├── 04_Feature_Engineering.ipynb
+│   ├── 05_Customer_Segmentation.ipynb
+│   ├── 06_Demand_Forecasting.ipynb
+│   ├── 07_Customer_Feature_Engineering.ipynb
+│   ├── 08_Customer_Churn_Prediction.ipynb
+│   ├── 09_Inventory_Optimization.ipynb
+│   └── 10_Dashboard_Dataset_Preparation.ipynb
 │
-├── screenshots/
-│   └── dashboards/
+├── 📂 images/
+│   └── dashboards/                  # Dashboard images
 │
-├── requirements.txt
-├── README.md
-└── LICENSE
+├── requirements.txt                 # Python dependencies
+├── README.md                        # Project documentation
+├── LICENSE                          # MIT License
+└── .gitignore
+```
 ```
 
 ---
