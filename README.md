@@ -297,41 +297,11 @@ RetailPulse/
 
 # 📈 Project Workflow
 
-```text
-01_Data_Understanding
-            │
-            ▼
-02_Data_Cleaning
-            │
-            ▼
-03_Exploratory_Data_Analysis
-            │
-            ▼
-04_Feature_Engineering
-            │
-            ▼
-05_Customer_Segmentation
-            │
-            ▼
-06_Demand_Forecasting
-            │
-            ▼
-07_Customer_Feature_Engineering
-            │
-            ▼
-08_Customer_Churn_Prediction
-            │
-            ▼
-09_Inventory_Optimization
-            │
-            ▼
-10_Dashboard_Dataset_Preparation
-            │
-            ▼
-Interactive Streamlit Dashboard
-```
+The following workflow illustrates the complete end-to-end data science pipeline implemented in RetailPulse, from raw data understanding to the final interactive Streamlit dashboard.
 
----
+<p align="center">
+  <img src="images/project_workflow.png" alt="RetailPulse Project Workflow" width="700"/>
+</p>
 
 # ⚙️ Installation                      
 
