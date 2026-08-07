@@ -35,8 +35,8 @@ Retail organizations generate massive volumes of transactional data every day. E
 RetailPulse addresses these challenges by providing an intelligent analytics platform that converts raw retail data into actionable insights.
 
 ---
-## 🚀 Live Demo
-
+## 🌐 Live Demo
+###🚀 Streamlit Cloud
 🔗 [RetailPulse Live Dashboard](https://retailpulse-app-3bxa4n29pylemdsfb6nfka.streamlit.app/)
 
 # 🚀 Key Features
