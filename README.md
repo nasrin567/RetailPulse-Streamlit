@@ -127,94 +127,97 @@ The project includes trained machine learning models for:
 - Demand Forecasting using Prophet (`prophet_model.pkl`)
 
 ---
+# 📊 Dashboard Overview
 
-# 📊 Dashboard Modules
+RetailPulse includes **11 interactive dashboards**, each designed to provide actionable insights into different aspects of retail business performance.
 
-The Streamlit application consists of **11 interactive dashboards**.
+---
 
 ## 🏠 Home
 
-Project overview with KPI cards and quick navigation.
+Provides a centralized overview of the platform with key business KPIs and quick navigation to all analytics modules.
+
+![Home Dashboard](images/home.png)
 
 ---
 
 ## 📈 Executive Dashboard
 
-High-level business performance overview including revenue, orders, customers, and sales KPIs.
+Presents high-level business performance metrics, including revenue, orders, customers, and executive KPIs for quick decision-making.
+
+![Executive Dashboard](images/executive_dashboard.png)
 
 ---
 
 ## 📊 Sales Analytics
 
-- Revenue Trends
-- Monthly Sales
-- Sales Distribution
-- Performance Metrics
+Analyzes sales performance through revenue trends, monthly sales, growth patterns, and key sales metrics.
+
+![Sales Analytics](images/sales_analytics.png)
 
 ---
 
 ## 👥 Customer Analytics
 
-- Customer Behaviour
-- Purchase Frequency
-- Spending Analysis
-- Customer KPIs
+Visualizes customer behavior, purchasing patterns, engagement metrics, and overall customer performance.
+
+![Customer Analytics](images/customer_analytics.png)
 
 ---
 
 ## 🎯 Customer Segmentation
 
-- RFM Analysis
-- Customer Segments
-- Segment Distribution
+Segments customers using **RFM (Recency, Frequency, Monetary)** analysis to identify valuable customer groups and marketing opportunities.
+
+![Customer Segmentation](images/customer_segmentation.png)
 
 ---
 
 ## ⚠ Customer Churn
 
-- Churn Prediction
-- Customer Risk Analysis
-- Retention Insights
+Predicts customers at risk of leaving the business and provides insights that support customer retention strategies.
+
+![Customer Churn](images/customer_churn.png)
 
 ---
 
 ## 📦 Inventory
 
-- Inventory Status
-- Product Availability
-- Inventory KPIs
+Monitors inventory status, stock levels, inventory KPIs, and product availability to support inventory optimization.
+
+![Inventory Dashboard](images/inventory.png)
 
 ---
 
 ## 🌍 Country Analysis
 
-- Country-wise Revenue
-- Sales Distribution
-- Geographic Insights
+Provides geographical insights by analyzing country-wise sales, revenue distribution, and international business performance.
+
+![Country Analysis](images/country_analysis.png)
 
 ---
 
 ## 🛒 Product Analytics
 
-- Product Performance
-- Best Selling Products
-- Revenue Contribution
+Evaluates product performance through sales, pricing, revenue contribution, and top-performing products.
+
+![Product Analytics](images/product_analytics.png)
 
 ---
 
 ## 📅 Demand Forecast
 
-- Prophet Forecasting
-- Future Sales Prediction
-- Trend Visualization
+Uses the **Prophet forecasting model** to predict future sales trends and support inventory and business planning.
+
+![Demand Forecast](images/demand_forecast.png)
 
 ---
 
 ## 💡 Business Insights
 
-- Executive Recommendations
-- Business KPIs
-- Strategic Insights
+Summarizes key findings, business recommendations, and strategic insights generated from the overall retail analytics pipeline.
+
+![Business Insights](images/business_insights.png)
 
 ---
 
@@ -330,75 +333,7 @@ Interactive Streamlit Dashboard
 
 ---
 
-# 📷 Dashboard Screenshots
-
-## 🏠 Home
-
-![Home](screenshots/dashboards/home.png)
-
----
-
-## 📈 Executive Dashboard
-
-![Executive Dashboard](screenshots/dashboards/executive_dashboard.png)
-
----
-
-## 📊 Sales Analytics
-
-![Sales Analytics](screenshots/dashboards/sales_analytics.png)
-
----
-
-## 👥 Customer Analytics
-
-![Customer Analytics](screenshots/dashboards/customer_analytics.png)
-
----
-
-## 🎯 Customer Segmentation
-
-![Customer Segmentation](screenshots/dashboards/customer_segmentation.png)
-
----
-
-## ⚠ Customer Churn
-
-![Customer Churn](screenshots/dashboards/customer_churn.png)
-
----
-
-## 📦 Inventory
-
-![Inventory](screenshots/dashboards/inventory.png)
-
----
-
-## 🌍 Country Analysis
-
-![Country Analysis](screenshots/dashboards/country_analysis.png)
-
----
-
-## 🛒 Product Analytics
-
-![Product Analytics](screenshots/dashboards/product_analytics.png)
-
----
-
-## 📅 Demand Forecast
-
-![Demand Forecast](screenshots/dashboards/demand_forecast.png)
-
----
-
-## 💡 Business Insights
-
-![Business Insights](screenshots/dashboards/business_insights.png)
-
----
-
-# ⚙️ Installation
+# ⚙️ Installation                      
 
 Clone the repository:
 
