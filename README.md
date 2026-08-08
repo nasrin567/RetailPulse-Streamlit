@@ -349,9 +349,9 @@ streamlit run app/app.py
 
 # 👥 Contributors
 
-- Nasrin Khatoon
-- Pinkey Kavar Bika
-- Sheikh Moin
+- Nasrin Khatoon - https://github.com/nasrin567
+- Pinkey Kavar Bika - https://github.com/pinkey-kavar-bika
+- Sheikh Moin - https://github.com/sheikhmoin-09
 
 ---
 
