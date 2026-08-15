@@ -313,8 +313,7 @@ The following workflow illustrates the complete end-to-end data science pipeline
 Clone the repository:
 
 ```bash
-
-git clone https://github.com/pinkey-kavar-bika/RetailPulse.git
+git clone https://github.com/nasrin567/RetailPulse-Streamlit.git
 ```
 
 Navigate to the project directory:
